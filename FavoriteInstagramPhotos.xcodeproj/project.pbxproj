@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		900FD1C81A0ECCCE006FEBBF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 900FD1C71A0ECCCE006FEBBF /* main.m */; };
 		900FD1CB1A0ECCCE006FEBBF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 900FD1CA1A0ECCCE006FEBBF /* AppDelegate.m */; };
-		900FD1CE1A0ECCCE006FEBBF /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 900FD1CD1A0ECCCE006FEBBF /* FirstViewController.m */; };
+		900FD1CE1A0ECCCE006FEBBF /* PhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 900FD1CD1A0ECCCE006FEBBF /* PhotosViewController.m */; };
 		900FD1D11A0ECCCE006FEBBF /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 900FD1D01A0ECCCE006FEBBF /* SecondViewController.m */; };
 		900FD1D41A0ECCCE006FEBBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 900FD1D21A0ECCCE006FEBBF /* Main.storyboard */; };
 		900FD1D61A0ECCCE006FEBBF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 900FD1D51A0ECCCE006FEBBF /* Images.xcassets */; };
 		900FD1D91A0ECCCE006FEBBF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 900FD1D71A0ECCCE006FEBBF /* LaunchScreen.xib */; };
 		900FD1E51A0ECCCE006FEBBF /* FavoriteInstagramPhotosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 900FD1E41A0ECCCE006FEBBF /* FavoriteInstagramPhotosTests.m */; };
+		900FD1F01A0ECDA8006FEBBF /* PhotosCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 900FD1EF1A0ECDA8006FEBBF /* PhotosCollectionViewCell.m */; };
+		900FD1F31A0ED177006FEBBF /* InstagramImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 900FD1F21A0ED177006FEBBF /* InstagramImage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,8 +35,8 @@
 		900FD1C71A0ECCCE006FEBBF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		900FD1C91A0ECCCE006FEBBF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		900FD1CA1A0ECCCE006FEBBF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		900FD1CC1A0ECCCE006FEBBF /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		900FD1CD1A0ECCCE006FEBBF /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		900FD1CC1A0ECCCE006FEBBF /* PhotosViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotosViewController.h; sourceTree = "<group>"; };
+		900FD1CD1A0ECCCE006FEBBF /* PhotosViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotosViewController.m; sourceTree = "<group>"; };
 		900FD1CF1A0ECCCE006FEBBF /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		900FD1D01A0ECCCE006FEBBF /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		900FD1D31A0ECCCE006FEBBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -43,6 +45,10 @@
 		900FD1DE1A0ECCCE006FEBBF /* FavoriteInstagramPhotosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FavoriteInstagramPhotosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		900FD1E31A0ECCCE006FEBBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		900FD1E41A0ECCCE006FEBBF /* FavoriteInstagramPhotosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FavoriteInstagramPhotosTests.m; sourceTree = "<group>"; };
+		900FD1EE1A0ECDA8006FEBBF /* PhotosCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotosCollectionViewCell.h; sourceTree = "<group>"; };
+		900FD1EF1A0ECDA8006FEBBF /* PhotosCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotosCollectionViewCell.m; sourceTree = "<group>"; };
+		900FD1F11A0ED177006FEBBF /* InstagramImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstagramImage.h; sourceTree = "<group>"; };
+		900FD1F21A0ED177006FEBBF /* InstagramImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstagramImage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,13 +90,16 @@
 		900FD1C41A0ECCCE006FEBBF /* FavoriteInstagramPhotos */ = {
 			isa = PBXGroup;
 			children = (
+				900FD1D21A0ECCCE006FEBBF /* Main.storyboard */,
 				900FD1C91A0ECCCE006FEBBF /* AppDelegate.h */,
 				900FD1CA1A0ECCCE006FEBBF /* AppDelegate.m */,
-				900FD1CC1A0ECCCE006FEBBF /* FirstViewController.h */,
-				900FD1CD1A0ECCCE006FEBBF /* FirstViewController.m */,
+				900FD1CC1A0ECCCE006FEBBF /* PhotosViewController.h */,
+				900FD1CD1A0ECCCE006FEBBF /* PhotosViewController.m */,
+				900FD1EE1A0ECDA8006FEBBF /* PhotosCollectionViewCell.h */,
+				900FD1EF1A0ECDA8006FEBBF /* PhotosCollectionViewCell.m */,
 				900FD1CF1A0ECCCE006FEBBF /* SecondViewController.h */,
 				900FD1D01A0ECCCE006FEBBF /* SecondViewController.m */,
-				900FD1D21A0ECCCE006FEBBF /* Main.storyboard */,
+				900FD1F41A0ED17D006FEBBF /* Model */,
 				900FD1D51A0ECCCE006FEBBF /* Images.xcassets */,
 				900FD1D71A0ECCCE006FEBBF /* LaunchScreen.xib */,
 				900FD1C51A0ECCCE006FEBBF /* Supporting Files */,
@@ -122,6 +131,15 @@
 				900FD1E31A0ECCCE006FEBBF /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		900FD1F41A0ED17D006FEBBF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				900FD1F11A0ED177006FEBBF /* InstagramImage.h */,
+				900FD1F21A0ED177006FEBBF /* InstagramImage.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,9 +242,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				900FD1F31A0ED177006FEBBF /* InstagramImage.m in Sources */,
 				900FD1D11A0ECCCE006FEBBF /* SecondViewController.m in Sources */,
+				900FD1F01A0ECDA8006FEBBF /* PhotosCollectionViewCell.m in Sources */,
 				900FD1CB1A0ECCCE006FEBBF /* AppDelegate.m in Sources */,
-				900FD1CE1A0ECCCE006FEBBF /* FirstViewController.m in Sources */,
+				900FD1CE1A0ECCCE006FEBBF /* PhotosViewController.m in Sources */,
 				900FD1C81A0ECCCE006FEBBF /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
