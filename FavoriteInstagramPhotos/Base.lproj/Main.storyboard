@@ -31,10 +31,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="An9-oT-He6">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                                <rect key="frame" x="0.0" y="63" width="320" height="456"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="17H-pj-xtH">
                                     <size key="itemSize" width="319.5" height="520"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="headerReferenceSize" width="40" height="40"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
@@ -63,21 +63,35 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="V9p-at-R1c">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionReusableView>
                                 <connections>
                                     <outlet property="dataSource" destination="9pv-A4-QxB" id="Gma-dh-P52"/>
                                     <outlet property="delegate" destination="9pv-A4-QxB" id="39V-SA-mut"/>
                                 </connections>
                             </collectionView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Fe5-Uc-ZAf">
+                                <rect key="frame" x="-1" y="19" width="320" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="9pv-A4-QxB" id="5C2-4e-1p1"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Fe5-Uc-ZAf" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-17" id="45s-Fr-8nb"/>
+                            <constraint firstItem="Fe5-Uc-ZAf" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="topMargin" constant="19" id="5ns-b6-E8y"/>
                             <constraint firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="6BV-lF-sBN"/>
                             <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="An9-oT-He6" secondAttribute="bottom" id="9Nv-r2-NaS"/>
-                            <constraint firstItem="An9-oT-He6" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="topMargin" id="FBW-8l-Ha2"/>
+                            <constraint firstItem="An9-oT-He6" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="topMargin" constant="63" id="FBW-8l-Ha2"/>
                             <constraint firstItem="An9-oT-He6" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-16" id="Ja4-1B-yG8"/>
+                            <constraint firstItem="An9-oT-He6" firstAttribute="top" secondItem="Fe5-Uc-ZAf" secondAttribute="bottom" id="XIw-dc-f1j"/>
                             <constraint firstItem="A5M-7J-77L" firstAttribute="top" secondItem="KQZ-1w-vlD" secondAttribute="bottom" constant="8" symbolic="YES" id="cfb-er-3JN"/>
                             <constraint firstItem="A5M-7J-77L" firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="e1l-AV-tCB"/>
                             <constraint firstAttribute="centerY" secondItem="KQZ-1w-vlD" secondAttribute="centerY" id="exm-UA-ej4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Fe5-Uc-ZAf" secondAttribute="trailing" constant="-15" id="fO0-DD-xVZ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="An9-oT-He6" secondAttribute="trailing" constant="-16" id="zKr-3w-vgb"/>
                         </constraints>
                     </view>
@@ -88,7 +102,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="399.5" y="-303"/>
+            <point key="canvasLocation" x="399" y="-303"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">

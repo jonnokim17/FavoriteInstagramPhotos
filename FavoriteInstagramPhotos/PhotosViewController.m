@@ -7,12 +7,13 @@
 //
 
 #define kJSONURL @"https://api.instagram.com/v1/tags/lakers/media/recent?count=10&client_id=7546270fb62443c897938bdd6bed27bf"
+#define kSearchJSON @"https://api.instagram.com/v1/tags/%@/media/recent?count=10&client_id=7546270fb62443c897938bdd6bed27bf"
 
 #import "PhotosViewController.h"
 #import "InstagramImage.h"
 #import "PhotosCollectionViewCell.h"
 
-@interface PhotosViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
+@interface PhotosViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UISearchBarDelegate>
 
 @property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
 
@@ -26,6 +27,10 @@
 
     [self getJSONDataFromURL:kJSONURL];
 }
+
+#pragma Helper Methods
+
+// Getting JSON Data via Model
 
 - (void)getJSONDataFromURL:(NSString *)urlString
 {
@@ -54,6 +59,20 @@
             [self.collectionView reloadData];
         }
     }];
+}
+
+#pragma mark - Searchbar Delegate
+
+-(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    if (![searchBar.text isEqualToString:@""]) {
+        self.dataArray = [@[] mutableCopy];
+
+        NSString *searchString = [NSString stringWithFormat:kSearchJSON, searchBar.text];
+        [self getJSONDataFromURL:searchString];
+
+        [searchBar resignFirstResponder];
+    }
 }
 
 #pragma mark - UICollectionViewDelegateFlowLayout
