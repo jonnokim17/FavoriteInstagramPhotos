@@ -76,23 +76,26 @@
 
     instaImage.isSelected = !instaImage.isSelected;
 
-
-    [self.favoritesArray addObject:instaImage];
+    [self checkForFavoritedPhoto:instaImage];
 
     [self.collectionView reloadData];
 }
 
-- (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath
+- (void)checkForFavoritedPhoto:(InstagramImage *)photo
 {
-    InstagramImage *instaImage = self.dataArray[indexPath.item];
+    BOOL favoritedPhoto = NO;
 
-    if (!instaImage.isSelected)
+    for (InstagramImage *instaImage in self.favoritesArray)
     {
-        instaImage.isSelected = YES;
+        if (photo.photoID == instaImage.photoID)
+        {
+            favoritedPhoto = YES;
+        }
+    }
 
-        [self.favoritesArray removeObject:instaImage];
-
-        [self.collectionView reloadData];
+    if (favoritedPhoto == NO)
+    {
+        [self.favoritesArray addObject:photo];
     }
 }
 
@@ -140,6 +143,7 @@
     else
     {
         cell.likedImage.image = [UIImage imageNamed:@"heart_full"];
+
     }
 
 
