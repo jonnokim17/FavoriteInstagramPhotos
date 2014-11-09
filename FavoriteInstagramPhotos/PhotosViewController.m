@@ -26,6 +26,7 @@
     [super viewDidLoad];
 
     [self getJSONDataFromURL:kJSONURL];
+
 }
 
 #pragma Helper Methods
@@ -61,6 +62,19 @@
     }];
 }
 
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+
+    InstagramImage *instaImage = self.dataArray[indexPath.item];
+
+    instaImage.isSelected = !instaImage.isSelected;
+
+    [self.collectionView reloadData];
+}
+
+
+
+
 #pragma mark - Searchbar Delegate
 
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
@@ -82,7 +96,7 @@
     return CGSizeMake(self.view.frame.size.width, self.view.frame.size.width);
 }
 
-#pragma mark - UIColletionView Delegate
+
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
@@ -96,7 +110,16 @@
 
     cell.imageView.image = instagramImage.instagramImage;
 
-    return cell;
+    if (!instagramImage.isSelected)
+    {
+        cell.likedImage.image = [UIImage imageNamed:@"heart"];
+    }
+    else
+    {
+        cell.likedImage.image = [UIImage imageNamed:@"heart_full"];
+    }
 
+
+    return cell;
 }
 @end

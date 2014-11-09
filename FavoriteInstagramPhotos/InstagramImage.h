@@ -12,6 +12,7 @@
 @interface InstagramImage : NSObject
 
 @property (strong, nonatomic) UIImage *instagramImage;
+@property BOOL isSelected;
 @property (strong, nonatomic) NSString *photoID;
 
 - (instancetype)initWithDictionary:(NSDictionary *)photoDictionary;

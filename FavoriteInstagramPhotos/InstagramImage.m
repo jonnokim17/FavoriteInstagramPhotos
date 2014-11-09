@@ -19,6 +19,8 @@
     NSData *urlData = [NSData dataWithContentsOfURL:url];
     self.instagramImage = [UIImage imageWithData:urlData];
 
+    self.isSelected = NO;
+
     return self;
 }
 

@@ -5,7 +5,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--First-->
+        <!--Photos View Controller-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="PhotosViewController" sceneMemberID="viewController">
@@ -32,8 +32,9 @@
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="An9-oT-He6">
                                 <rect key="frame" x="0.0" y="63" width="320" height="456"/>
+                                <gestureRecognizers/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="17H-pj-xtH">
-                                    <size key="itemSize" width="319.5" height="520"/>
+                                    <size key="itemSize" width="300" height="300"/>
                                     <size key="headerReferenceSize" width="40" height="40"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -43,27 +44,38 @@
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="319.5" height="520"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="52c-vY-DyC">
                                                     <rect key="frame" x="0.0" y="0.0" width="319.5" height="520"/>
                                                 </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vWh-63-pcw">
+                                                    <rect key="frame" x="308" y="308" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="ZMG-4X-EIH"/>
+                                                        <constraint firstAttribute="height" constant="50" id="xFV-DQ-ltf"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstAttribute="bottomMargin" secondItem="52c-vY-DyC" secondAttribute="bottom" constant="-8" id="H7q-Tf-UZB"/>
+                                            <constraint firstItem="vWh-63-pcw" firstAttribute="leading" secondItem="g9y-Md-m4n" secondAttribute="leadingMargin" constant="300" id="0ky-qZ-x2o"/>
+                                            <constraint firstItem="vWh-63-pcw" firstAttribute="top" secondItem="g9y-Md-m4n" secondAttribute="topMargin" constant="300" id="45L-ba-rNW"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="52c-vY-DyC" secondAttribute="bottom" constant="-228" id="H7q-Tf-UZB"/>
                                             <constraint firstItem="52c-vY-DyC" firstAttribute="leading" secondItem="g9y-Md-m4n" secondAttribute="leadingMargin" constant="-8" id="IIu-cN-P3Z"/>
                                             <constraint firstItem="52c-vY-DyC" firstAttribute="top" secondItem="g9y-Md-m4n" secondAttribute="topMargin" constant="-8" id="XrZ-wb-2MB"/>
-                                            <constraint firstAttribute="trailingMargin" secondItem="52c-vY-DyC" secondAttribute="trailing" constant="-8" id="pS6-sO-V8C"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="52c-vY-DyC" secondAttribute="trailing" constant="-27.5" id="pS6-sO-V8C"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="imageView" destination="52c-vY-DyC" id="tZA-mo-dek"/>
+                                            <outlet property="likedImage" destination="vWh-63-pcw" id="FUw-IW-I4l"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="V9p-at-R1c">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </collectionReusableView>
                                 <connections>
@@ -95,7 +107,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="An9-oT-He6" secondAttribute="trailing" constant="-16" id="zKr-3w-vgb"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" systemItem="search" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="collectionView" destination="An9-oT-He6" id="v76-H7-XQr"/>
                     </connections>
@@ -104,7 +116,7 @@
             </objects>
             <point key="canvasLocation" x="399" y="-303"/>
         </scene>
-        <!--Second-->
+        <!--Favorites-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="SecondViewController" sceneMemberID="viewController">
@@ -138,7 +150,7 @@
                             <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Favorites" image="second" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -165,7 +177,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
