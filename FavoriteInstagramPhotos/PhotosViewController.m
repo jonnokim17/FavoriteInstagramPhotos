@@ -74,7 +74,7 @@
 
     InstagramImage *instaImage = self.dataArray[indexPath.item];
 
-    instaImage.isSelected = !instaImage.isSelected;
+    instaImage.isSelected = YES;
 
     [self checkForFavoritedPhoto:instaImage];
 
