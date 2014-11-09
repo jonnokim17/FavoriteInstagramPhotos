@@ -21,6 +21,11 @@
 
 @implementation PhotosViewController
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self.collectionView reloadData];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -71,6 +76,7 @@
 
     instaImage.isSelected = !instaImage.isSelected;
 
+
     [self.favoritesArray addObject:instaImage];
 
     [self.collectionView reloadData];
@@ -88,10 +94,7 @@
 
         [self.collectionView reloadData];
     }
-
-
 }
-
 
 
 

@@ -15,6 +15,8 @@
 {
     self = [super init];
 
+    self.photoID = photoDictionary[@"id"];
+
     NSURL *url = [NSURL URLWithString:photoDictionary[@"images"][@"standard_resolution"][@"url"]];
     NSData *urlData = [NSData dataWithContentsOfURL:url];
     self.instagramImage = [UIImage imageWithData:urlData];

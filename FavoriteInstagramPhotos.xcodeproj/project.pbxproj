@@ -96,14 +96,8 @@
 				900FD1D21A0ECCCE006FEBBF /* Main.storyboard */,
 				900FD1C91A0ECCCE006FEBBF /* AppDelegate.h */,
 				900FD1CA1A0ECCCE006FEBBF /* AppDelegate.m */,
-				900FD1CC1A0ECCCE006FEBBF /* PhotosViewController.h */,
-				900FD1CD1A0ECCCE006FEBBF /* PhotosViewController.m */,
-				900FD1EE1A0ECDA8006FEBBF /* PhotosCollectionViewCell.h */,
-				900FD1EF1A0ECDA8006FEBBF /* PhotosCollectionViewCell.m */,
-				900FD1CF1A0ECCCE006FEBBF /* FavoritesViewController.h */,
-				900FD1D01A0ECCCE006FEBBF /* FavoritesViewController.m */,
-				90BBF7D31A0EFBE700E94582 /* FavoritesCollectionViewCell.h */,
-				90BBF7D41A0EFBE700E94582 /* FavoritesCollectionViewCell.m */,
+				90BBF7D71A0F039300E94582 /* Custom Cells */,
+				90BBF7D61A0F036F00E94582 /* VCS */,
 				900FD1F41A0ED17D006FEBBF /* Model */,
 				900FD1D51A0ECCCE006FEBBF /* Images.xcassets */,
 				900FD1D71A0ECCCE006FEBBF /* LaunchScreen.xib */,
@@ -145,6 +139,28 @@
 				900FD1F21A0ED177006FEBBF /* InstagramImage.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		90BBF7D61A0F036F00E94582 /* VCS */ = {
+			isa = PBXGroup;
+			children = (
+				900FD1CC1A0ECCCE006FEBBF /* PhotosViewController.h */,
+				900FD1CD1A0ECCCE006FEBBF /* PhotosViewController.m */,
+				900FD1CF1A0ECCCE006FEBBF /* FavoritesViewController.h */,
+				900FD1D01A0ECCCE006FEBBF /* FavoritesViewController.m */,
+			);
+			name = VCS;
+			sourceTree = "<group>";
+		};
+		90BBF7D71A0F039300E94582 /* Custom Cells */ = {
+			isa = PBXGroup;
+			children = (
+				900FD1EE1A0ECDA8006FEBBF /* PhotosCollectionViewCell.h */,
+				900FD1EF1A0ECDA8006FEBBF /* PhotosCollectionViewCell.m */,
+				90BBF7D31A0EFBE700E94582 /* FavoritesCollectionViewCell.h */,
+				90BBF7D41A0EFBE700E94582 /* FavoritesCollectionViewCell.m */,
+			);
+			name = "Custom Cells";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

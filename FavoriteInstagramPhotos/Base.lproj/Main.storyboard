@@ -48,7 +48,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="52c-vY-DyC">
-                                                    <rect key="frame" x="0.0" y="0.0" width="319.5" height="520"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vWh-63-pcw">
                                                     <rect key="frame" x="308" y="308" width="50" height="50"/>
@@ -63,10 +63,10 @@
                                         <constraints>
                                             <constraint firstItem="vWh-63-pcw" firstAttribute="leading" secondItem="g9y-Md-m4n" secondAttribute="leadingMargin" constant="300" id="0ky-qZ-x2o"/>
                                             <constraint firstItem="vWh-63-pcw" firstAttribute="top" secondItem="g9y-Md-m4n" secondAttribute="topMargin" constant="300" id="45L-ba-rNW"/>
-                                            <constraint firstAttribute="bottomMargin" secondItem="52c-vY-DyC" secondAttribute="bottom" constant="-228" id="H7q-Tf-UZB"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="52c-vY-DyC" secondAttribute="bottom" constant="-8" id="H7q-Tf-UZB"/>
                                             <constraint firstItem="52c-vY-DyC" firstAttribute="leading" secondItem="g9y-Md-m4n" secondAttribute="leadingMargin" constant="-8" id="IIu-cN-P3Z"/>
                                             <constraint firstItem="52c-vY-DyC" firstAttribute="top" secondItem="g9y-Md-m4n" secondAttribute="topMargin" constant="-8" id="XrZ-wb-2MB"/>
-                                            <constraint firstAttribute="trailingMargin" secondItem="52c-vY-DyC" secondAttribute="trailing" constant="-27.5" id="pS6-sO-V8C"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="52c-vY-DyC" secondAttribute="trailing" constant="-8" id="pS6-sO-V8C"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="imageView" destination="52c-vY-DyC" id="tZA-mo-dek"/>
@@ -157,14 +157,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="289" height="265"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C0y-KH-oNr">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="C0y-KH-oNr">
                                                     <rect key="frame" x="0.0" y="0.0" width="289" height="265"/>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="C0y-KH-oNr" firstAttribute="leading" secondItem="oOb-k7-eCN" secondAttribute="leadingMargin" id="0VH-RY-EG6"/>
+                                            <constraint firstItem="C0y-KH-oNr" firstAttribute="leading" secondItem="oOb-k7-eCN" secondAttribute="leadingMargin" constant="-8" id="0VH-RY-EG6"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="C0y-KH-oNr" secondAttribute="trailing" constant="-8" id="2bV-rT-4PC"/>
                                             <constraint firstItem="C0y-KH-oNr" firstAttribute="top" secondItem="oOb-k7-eCN" secondAttribute="topMargin" constant="-8" id="eOe-cl-KXa"/>
                                             <constraint firstAttribute="bottomMargin" secondItem="C0y-KH-oNr" secondAttribute="bottom" constant="-8" id="yDj-RL-7wH"/>
@@ -174,7 +174,7 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
-                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="x72-h8-V3b">
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="favoriteCell" id="x72-h8-V3b">
                                     <autoresizingMask key="autoresizingMask"/>
                                 </collectionReusableView>
                                 <connections>

@@ -14,22 +14,27 @@
 @interface FavoritesViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
 @property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
-
 @property (strong, nonatomic) NSMutableArray *favoritesArray;
 
 @end
 
 @implementation FavoritesViewController
 
-- (void)viewDidLoad
+- (void)viewWillAppear:(BOOL)animated
 {
-    [super viewDidLoad];
-
     self.favoritesArray = [@[] mutableCopy];
+
+    [self.collectionView reloadData];
 
     PhotosViewController *photoVC = self.tabBarController.viewControllers[0];
 
     [self.favoritesArray addObjectsFromArray:photoVC.favoritesArray];
+
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
 
 }
 
