@@ -24,6 +24,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [self.collectionView reloadData];
+
 }
 
 - (void)viewDidLoad
@@ -33,6 +34,7 @@
     self.favoritesArray = [@[] mutableCopy];
 
     [self getJSONDataFromURL:kJSONURL];
+
 
 }
 
@@ -77,8 +79,6 @@
     instaImage.isSelected = YES;
 
     [self checkForFavoritedPhoto:instaImage];
-
-    [self.collectionView reloadData];
 }
 
 - (void)checkForFavoritedPhoto:(InstagramImage *)photo
@@ -97,6 +97,8 @@
     {
         [self.favoritesArray addObject:photo];
     }
+    [self.collectionView reloadData];
+    [self save];
 }
 
 
@@ -145,8 +147,33 @@
         cell.likedImage.image = [UIImage imageNamed:@"heart_full"];
 
     }
-
-
     return cell;
 }
+
+#pragma mark SAVE/LOAD METHODS
+
+- (void)save
+{
+    NSURL *plistURL = [[self documentsDirectoryURL]URLByAppendingPathComponent:@"favorites.plist"];
+    [self.favoritesArray writeToURL:plistURL atomically:YES];
+}
+
+- (void)load
+{
+    NSURL *plistURL = [[self documentsDirectoryURL]URLByAppendingPathComponent:@"favorites.plist"];
+    self.favoritesArray = [NSMutableArray arrayWithContentsOfURL:plistURL];
+
+    if (self.favoritesArray == nil)
+    {
+        self.favoritesArray = [@[]mutableCopy];
+    }
+}
+
+- (NSURL*)documentsDirectoryURL
+{
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSURL *url = [fileManager URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask].firstObject;
+    return url;
+}
+
 @end
