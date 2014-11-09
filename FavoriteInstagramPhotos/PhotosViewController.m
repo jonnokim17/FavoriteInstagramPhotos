@@ -25,6 +25,8 @@
 {
     [super viewDidLoad];
 
+    self.favoritesArray = [@[] mutableCopy];
+
     [self getJSONDataFromURL:kJSONURL];
 
 }
@@ -69,7 +71,25 @@
 
     instaImage.isSelected = !instaImage.isSelected;
 
+    [self.favoritesArray addObject:instaImage];
+
     [self.collectionView reloadData];
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    InstagramImage *instaImage = self.dataArray[indexPath.item];
+
+    if (!instaImage.isSelected)
+    {
+        instaImage.isSelected = YES;
+
+        [self.favoritesArray removeObject:instaImage];
+
+        [self.collectionView reloadData];
+    }
+
+
 }
 
 

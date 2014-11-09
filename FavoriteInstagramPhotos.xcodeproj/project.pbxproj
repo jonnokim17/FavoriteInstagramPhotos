@@ -10,13 +10,14 @@
 		900FD1C81A0ECCCE006FEBBF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 900FD1C71A0ECCCE006FEBBF /* main.m */; };
 		900FD1CB1A0ECCCE006FEBBF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 900FD1CA1A0ECCCE006FEBBF /* AppDelegate.m */; };
 		900FD1CE1A0ECCCE006FEBBF /* PhotosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 900FD1CD1A0ECCCE006FEBBF /* PhotosViewController.m */; };
-		900FD1D11A0ECCCE006FEBBF /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 900FD1D01A0ECCCE006FEBBF /* SecondViewController.m */; };
+		900FD1D11A0ECCCE006FEBBF /* FavoritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 900FD1D01A0ECCCE006FEBBF /* FavoritesViewController.m */; };
 		900FD1D41A0ECCCE006FEBBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 900FD1D21A0ECCCE006FEBBF /* Main.storyboard */; };
 		900FD1D61A0ECCCE006FEBBF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 900FD1D51A0ECCCE006FEBBF /* Images.xcassets */; };
 		900FD1D91A0ECCCE006FEBBF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 900FD1D71A0ECCCE006FEBBF /* LaunchScreen.xib */; };
 		900FD1E51A0ECCCE006FEBBF /* FavoriteInstagramPhotosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 900FD1E41A0ECCCE006FEBBF /* FavoriteInstagramPhotosTests.m */; };
 		900FD1F01A0ECDA8006FEBBF /* PhotosCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 900FD1EF1A0ECDA8006FEBBF /* PhotosCollectionViewCell.m */; };
 		900FD1F31A0ED177006FEBBF /* InstagramImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 900FD1F21A0ED177006FEBBF /* InstagramImage.m */; };
+		90BBF7D51A0EFBE700E94582 /* FavoritesCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 90BBF7D41A0EFBE700E94582 /* FavoritesCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +38,8 @@
 		900FD1CA1A0ECCCE006FEBBF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		900FD1CC1A0ECCCE006FEBBF /* PhotosViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotosViewController.h; sourceTree = "<group>"; };
 		900FD1CD1A0ECCCE006FEBBF /* PhotosViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotosViewController.m; sourceTree = "<group>"; };
-		900FD1CF1A0ECCCE006FEBBF /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		900FD1D01A0ECCCE006FEBBF /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		900FD1CF1A0ECCCE006FEBBF /* FavoritesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FavoritesViewController.h; sourceTree = "<group>"; };
+		900FD1D01A0ECCCE006FEBBF /* FavoritesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FavoritesViewController.m; sourceTree = "<group>"; };
 		900FD1D31A0ECCCE006FEBBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		900FD1D51A0ECCCE006FEBBF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		900FD1D81A0ECCCE006FEBBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -49,6 +50,8 @@
 		900FD1EF1A0ECDA8006FEBBF /* PhotosCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotosCollectionViewCell.m; sourceTree = "<group>"; };
 		900FD1F11A0ED177006FEBBF /* InstagramImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstagramImage.h; sourceTree = "<group>"; };
 		900FD1F21A0ED177006FEBBF /* InstagramImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstagramImage.m; sourceTree = "<group>"; };
+		90BBF7D31A0EFBE700E94582 /* FavoritesCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesCollectionViewCell.h; sourceTree = "<group>"; };
+		90BBF7D41A0EFBE700E94582 /* FavoritesCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +100,10 @@
 				900FD1CD1A0ECCCE006FEBBF /* PhotosViewController.m */,
 				900FD1EE1A0ECDA8006FEBBF /* PhotosCollectionViewCell.h */,
 				900FD1EF1A0ECDA8006FEBBF /* PhotosCollectionViewCell.m */,
-				900FD1CF1A0ECCCE006FEBBF /* SecondViewController.h */,
-				900FD1D01A0ECCCE006FEBBF /* SecondViewController.m */,
+				900FD1CF1A0ECCCE006FEBBF /* FavoritesViewController.h */,
+				900FD1D01A0ECCCE006FEBBF /* FavoritesViewController.m */,
+				90BBF7D31A0EFBE700E94582 /* FavoritesCollectionViewCell.h */,
+				90BBF7D41A0EFBE700E94582 /* FavoritesCollectionViewCell.m */,
 				900FD1F41A0ED17D006FEBBF /* Model */,
 				900FD1D51A0ECCCE006FEBBF /* Images.xcassets */,
 				900FD1D71A0ECCCE006FEBBF /* LaunchScreen.xib */,
@@ -243,10 +248,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				900FD1F31A0ED177006FEBBF /* InstagramImage.m in Sources */,
-				900FD1D11A0ECCCE006FEBBF /* SecondViewController.m in Sources */,
+				900FD1D11A0ECCCE006FEBBF /* FavoritesViewController.m in Sources */,
 				900FD1F01A0ECDA8006FEBBF /* PhotosCollectionViewCell.m in Sources */,
 				900FD1CB1A0ECCCE006FEBBF /* AppDelegate.m in Sources */,
 				900FD1CE1A0ECCCE006FEBBF /* PhotosViewController.m in Sources */,
+				90BBF7D51A0EFBE700E94582 /* FavoritesCollectionViewCell.m in Sources */,
 				900FD1C81A0ECCCE006FEBBF /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -438,6 +444,7 @@
 				900FD1EA1A0ECCCE006FEBBF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		900FD1EB1A0ECCCE006FEBBF /* Build configuration list for PBXNativeTarget "FavoriteInstagramPhotosTests" */ = {
 			isa = XCConfigurationList;
@@ -446,6 +453,7 @@
 				900FD1ED1A0ECCCE006FEBBF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

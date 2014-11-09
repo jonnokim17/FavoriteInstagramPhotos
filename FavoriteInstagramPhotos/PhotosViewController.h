@@ -11,6 +11,7 @@
 @interface PhotosViewController : UIViewController
 
 @property (strong, nonatomic) NSMutableArray *dataArray;
+@property (strong, nonatomic) NSMutableArray *favoritesArray;
 
 @end
 
