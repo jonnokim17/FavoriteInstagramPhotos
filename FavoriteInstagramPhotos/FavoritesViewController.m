@@ -39,8 +39,11 @@
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Alert!" message:@"Would you like to delete your photos?" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Alert!" message:@"Would you like to delete this photo?" preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *deleteButton = [UIAlertAction actionWithTitle:@"DELETE" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
+
+        PhotosViewController *photoVC = self.tabBarController.viewControllers[0];
+        [photoVC.favoritesArray removeObjectAtIndex:indexPath.item];
 
         [self.favoritesArray removeObjectAtIndex:indexPath.item];
         [self.collectionView reloadData];
