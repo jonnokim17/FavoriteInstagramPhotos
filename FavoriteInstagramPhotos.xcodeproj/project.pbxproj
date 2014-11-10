@@ -19,6 +19,9 @@
 		900FD1F31A0ED177006FEBBF /* InstagramImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 900FD1F21A0ED177006FEBBF /* InstagramImage.m */; };
 		90235B6D1A107529004CB772 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90235B6C1A107529004CB772 /* MapViewController.m */; };
 		90235B6F1A1075FA004CB772 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90235B6E1A1075FA004CB772 /* MapKit.framework */; };
+		902C21AF1A1082AA0033A0D3 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 902C21AE1A1082AA0033A0D3 /* Twitter.framework */; };
+		902C21B11A1082B00033A0D3 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 902C21B01A1082B00033A0D3 /* Social.framework */; };
+		902C21B31A1082B70033A0D3 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 902C21B21A1082B70033A0D3 /* MessageUI.framework */; };
 		90BBF7D51A0EFBE700E94582 /* FavoritesCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 90BBF7D41A0EFBE700E94582 /* FavoritesCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +58,9 @@
 		90235B6B1A107529004CB772 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		90235B6C1A107529004CB772 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		90235B6E1A1075FA004CB772 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		902C21AE1A1082AA0033A0D3 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		902C21B01A1082B00033A0D3 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		902C21B21A1082B70033A0D3 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		90BBF7D31A0EFBE700E94582 /* FavoritesCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesCollectionViewCell.h; sourceTree = "<group>"; };
 		90BBF7D41A0EFBE700E94582 /* FavoritesCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -64,6 +70,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				902C21B31A1082B70033A0D3 /* MessageUI.framework in Frameworks */,
+				902C21B11A1082B00033A0D3 /* Social.framework in Frameworks */,
+				902C21AF1A1082AA0033A0D3 /* Twitter.framework in Frameworks */,
 				90235B6F1A1075FA004CB772 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -81,6 +90,9 @@
 		900FD1B91A0ECCCE006FEBBF = {
 			isa = PBXGroup;
 			children = (
+				902C21B21A1082B70033A0D3 /* MessageUI.framework */,
+				902C21B01A1082B00033A0D3 /* Social.framework */,
+				902C21AE1A1082AA0033A0D3 /* Twitter.framework */,
 				90235B6E1A1075FA004CB772 /* MapKit.framework */,
 				900FD1C41A0ECCCE006FEBBF /* FavoriteInstagramPhotos */,
 				900FD1E11A0ECCCE006FEBBF /* FavoriteInstagramPhotosTests */,

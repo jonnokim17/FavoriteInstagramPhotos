@@ -12,7 +12,11 @@
 #import "InstagramImage.h"
 #import "PhotosCollectionViewCell.h"
 
-@interface FavoritesViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
+#import <Social/Social.h>
+#import <Twitter/Twitter.h>
+#import <MessageUI/MessageUI.h>
+
+@interface FavoritesViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, MFMailComposeViewControllerDelegate, MFMessageComposeViewControllerDelegate, UINavigationControllerDelegate>
 
 @property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
 
@@ -59,9 +63,59 @@
     }];
     UIAlertAction *keepButton = [UIAlertAction actionWithTitle:@"KEEP" style:UIAlertActionStyleCancel handler:nil];
 
+    //Add Twitter use
+
+    UIAlertAction *tweetButton = [UIAlertAction actionWithTitle:@"TWEET!"
+                                                          style:UIAlertActionStyleDefault
+                                                        handler:^(UIAlertAction * action)
+                                  {
+                                      SLComposeViewController *tweet = [SLComposeViewController
+                                                                             composeViewControllerForServiceType:SLServiceTypeTwitter];
+                                      [tweet setInitialText:@"Sharing this awesome shot!"];
+
+                                      InstagramImage *twitterImage = self.favoritesArray[indexPath.item];
+                                      [tweet addImage:twitterImage.instagramImage];
+
+                                      [self presentViewController:tweet animated:YES completion:nil];
+
+                                      [alert dismissViewControllerAnimated:YES completion:nil];
+                                      
+                                  }];
+
+/* ---------------------Email function VERY BUGGY----------------*/
+
+    UIAlertAction *emailButton = [UIAlertAction actionWithTitle:@"E-mail" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+
+        MFMailComposeViewController *email = [[MFMailComposeViewController alloc] init];
+        email.delegate = self;
+
+//        InstagramImage *instagramPhoto = self.favoritesArray[indexPath.item];
+//        UIImage *emailImage = instagramPhoto.instagramImage;
+
+        // convert the image into data
+//        NSData *imageData = [NSData dataWithData:UIImagePNGRepresentation(emailImage)];
+
+        [email setSubject:@"Loving this snapshot"];
+        [email setToRecipients:[NSArray arrayWithObject:@"jonnokim17@gmail.com"]];
+        [email setMessageBody:@"What do you think about this pic??" isHTML:NO];
+//        [email addAttachmentData:imageData mimeType:@"png" fileName:@"Liked Picture"];
+
+        [self presentViewController:email animated:YES completion:nil];
+
+    }];
+
     [self presentViewController:alert animated:YES completion:nil];
     [alert addAction:deleteButton];
     [alert addAction:keepButton];
+    [alert addAction:tweetButton];
+    [alert addAction:emailButton];
+}
+
+#pragma mark - MFMessageComposeViewControllerDelegate
+
+- (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 
