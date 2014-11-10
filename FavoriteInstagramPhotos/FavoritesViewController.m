@@ -35,8 +35,21 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
 }
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Alert!" message:@"Would you like to delete your photos?" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *deleteButton = [UIAlertAction actionWithTitle:@"DELETE" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
+
+        [self.favoritesArray removeObjectAtIndex:indexPath.item];
+        [self.collectionView reloadData];
+    }];
+
+    [self presentViewController:alert animated:YES completion:nil];
+    [alert addAction:deleteButton];
+}
+
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
