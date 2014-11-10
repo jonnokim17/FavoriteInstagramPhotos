@@ -57,6 +57,11 @@
         coord.latitude = [localDictionary[@"location"][@"latitude"] floatValue];
         coord.longitude = [localDictionary[@"location"][@"longitude"] floatValue];
     }
+    else
+    {
+        NSLog(@"location not found");
+    }
+
     return coord;
 }
 

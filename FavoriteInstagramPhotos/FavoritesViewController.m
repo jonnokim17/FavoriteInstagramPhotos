@@ -11,6 +11,7 @@
 #import "FavoritesCollectionViewCell.h"
 #import "InstagramImage.h"
 #import "PhotosCollectionViewCell.h"
+#import "MapViewController.h"
 
 #import <Social/Social.h>
 #import <Twitter/Twitter.h>
@@ -19,7 +20,7 @@
 @interface FavoritesViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, MFMailComposeViewControllerDelegate, MFMessageComposeViewControllerDelegate, UINavigationControllerDelegate>
 
 @property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
-
+@property FavoritesCollectionViewCell *favoriteCell;
 
 @end
 
@@ -131,13 +132,13 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    FavoritesCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"favoritesCell" forIndexPath:indexPath];
+     self.favoriteCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"favoritesCell" forIndexPath:indexPath];
 
     InstagramImage *instagramImage = self.favoritesArray[indexPath.item];
 
-    cell.imageView.image = instagramImage.instagramImage;
+    self.favoriteCell.imageView.image = instagramImage.instagramImage;
 
-    return cell;
+    return self.favoriteCell;
 }
 
 #pragma mark - UICollectionViewDelegateFlowLayout
@@ -146,5 +147,28 @@
 {
     return CGSizeMake(self.view.frame.size.width, self.view.frame.size.width);
 }
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    NSIndexPath *selectedIndexPath = [self.collectionView indexPathForCell:self.favoriteCell];
+    InstagramImage *instagramImage = self.favoritesArray[selectedIndexPath.item];
+
+    MapViewController *mapVC = segue.destinationViewController;
+
+        if (instagramImage.coordinate.longitude != 0) {
+            mapVC.coordinate = instagramImage.coordinate;
+        }
+        else
+        {
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"SORRY" message:@"no location found!" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *okButton = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil];
+    
+            [alert addAction:okButton];
+    
+            [self presentViewController:alert animated:YES completion:nil];
+        }
+}
+
+
 
 @end

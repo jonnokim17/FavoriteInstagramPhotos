@@ -116,7 +116,7 @@
             </objects>
             <point key="canvasLocation" x="-179" y="457"/>
         </scene>
-        <!--Favorites-->
+        <!--Favorites View Controller-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="FavoritesViewController" sceneMemberID="viewController">
@@ -196,14 +196,20 @@
                             <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Favorites" image="second" id="cPa-gy-q4n"/>
+                    <navigationItem key="navigationItem" id="m8u-Bu-Zeb">
+                        <barButtonItem key="rightBarButtonItem" title="Map" id="udp-fK-hLK">
+                            <connections>
+                                <segue destination="e1v-2u-b3f" kind="push" id="pgb-w1-lEi"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="wor-Hm-hjk" id="RqS-iG-YcZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="240" y="457"/>
+            <point key="canvasLocation" x="772" y="457"/>
         </scene>
         <!--Item-->
         <scene sceneID="Bai-BO-Do6">
@@ -233,13 +239,14 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="tVf-oT-6ZY"/>
+                    <navigationItem key="navigationItem" id="RJ5-kz-6WD"/>
                     <connections>
                         <outlet property="mapView" destination="Cp8-Hi-nR9" id="1EF-He-3q5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kY9-XQ-Hrj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="609" y="456"/>
+            <point key="canvasLocation" x="1141" y="456"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -253,13 +260,31 @@
                     </tabBar>
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
-                        <segue destination="e1v-2u-b3f" kind="relationship" relationship="viewControllers" id="6j7-jg-Mmd"/>
+                        <segue destination="yJQ-hz-5TJ" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="240" y="-286"/>
+        </scene>
+        <!--Favorites-->
+        <scene sceneID="Gl3-Pa-nHA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yJQ-hz-5TJ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Favorites" image="second" id="cPa-gy-q4n"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3ZS-e2-OCB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="rootViewController" id="Dzr-Cc-Bhu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wfv-bP-kok" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="240" y="457"/>
         </scene>
     </scenes>
     <resources>
