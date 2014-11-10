@@ -157,6 +157,8 @@
 
         if (instagramImage.coordinate.longitude != 0) {
             mapVC.coordinate = instagramImage.coordinate;
+            mapVC.user = instagramImage.user;
+            mapVC.username = instagramImage.username;
         }
         else
         {

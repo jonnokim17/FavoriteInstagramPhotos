@@ -15,6 +15,8 @@
 @property (strong, nonatomic) UIImage *instagramImage;
 @property BOOL isSelected;
 @property (strong, nonatomic) NSString *photoID;
+@property (strong, nonatomic) NSString *user;
+@property (strong, nonatomic) NSString *username;
 
 //@property (strong, nonatomic) NSNumber *latitude;
 //@property (strong, nonatomic) NSNumber *longitude;

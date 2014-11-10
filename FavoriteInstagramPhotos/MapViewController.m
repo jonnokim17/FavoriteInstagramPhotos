@@ -46,6 +46,8 @@
 //    }
 
     annotation.coordinate = self.coordinate;
+    annotation.title = self.user;
+    annotation.subtitle = self.username;
 
     [self.mapView addAnnotation:annotation];
 
@@ -60,23 +62,19 @@
     [self.mapView setRegion:region animated:YES];
 }
 
-- (IBAction)onBackToFavoritesButtonPressed:(UIButton *)sender
-{
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
 
 
 #pragma mark - MKMapView Delegate
 
-//-(MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
-//{
-//
-//    MKPinAnnotationView *pin = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:nil];
-//    pin.canShowCallout = YES;
-//    pin.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-//
-//    return pin;
-//}
+-(MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
+{
+
+    MKPinAnnotationView *pin = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:nil];
+    pin.canShowCallout = YES;
+    pin.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+
+    return pin;
+}
 
 
 

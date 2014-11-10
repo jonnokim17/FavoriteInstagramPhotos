@@ -12,5 +12,7 @@
 @interface MapViewController : UIViewController
 
 @property CLLocationCoordinate2D coordinate;
+@property NSString *user;
+@property NSString *username;
 
 @end

@@ -21,6 +21,8 @@
     localDictionary = photoDictionary;
 
     self.photoID = photoDictionary[@"id"];
+    self.user = photoDictionary[@"user"][@"full_name"];
+    self.username = photoDictionary[@"user"][@"username"];
 
     NSURL *url = [NSURL URLWithString:photoDictionary[@"images"][@"standard_resolution"][@"url"]];
     NSData *urlData = [NSData dataWithContentsOfURL:url];
@@ -29,19 +31,6 @@
     // check to see if photo has been selected
     self.isSelected = NO;
 
-    // coordinate for mapVC
-//    CLLocationCoordinate2D coord;
-//
-//    if ([photoDictionary[@"location"] isEqual: @"null"]) {
-//        NSLog(@"sorry");
-//    }
-//    else
-//    {
-//        coord.latitude = [photoDictionary[@"location"][@"latitude"] doubleValue];
-//        coord.longitude = [photoDictionary[@"location"][@"longitude"] doubleValue];
-//    }
-//
-//    self.coordinate = coord;
 
     return self;
 }
