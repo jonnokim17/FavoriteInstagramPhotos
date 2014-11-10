@@ -8,12 +8,18 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 
 @interface InstagramImage : NSObject
 
 @property (strong, nonatomic) UIImage *instagramImage;
 @property BOOL isSelected;
 @property (strong, nonatomic) NSString *photoID;
+
+//@property (strong, nonatomic) NSNumber *latitude;
+//@property (strong, nonatomic) NSNumber *longitude;
+
+@property (readonly) CLLocationCoordinate2D coordinate;
 
 - (instancetype)initWithDictionary:(NSDictionary *)photoDictionary;
 

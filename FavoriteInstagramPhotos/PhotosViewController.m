@@ -15,7 +15,7 @@
 
 @interface PhotosViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UISearchBarDelegate>
 
-@property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
+
 
 @end
 
@@ -34,7 +34,6 @@
     self.favoritesArray = [@[] mutableCopy];
 
     [self getJSONDataFromURL:kJSONURL];
-
 
 }
 

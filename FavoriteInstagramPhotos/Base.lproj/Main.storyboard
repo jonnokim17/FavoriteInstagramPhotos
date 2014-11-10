@@ -114,7 +114,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="399" y="-303"/>
+            <point key="canvasLocation" x="-179" y="457"/>
         </scene>
         <!--Favorites-->
         <scene sceneID="wg7-f3-ORb">
@@ -203,7 +203,43 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="384.5" y="340"/>
+            <point key="canvasLocation" x="240" y="457"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="Bai-BO-Do6">
+            <objects>
+                <viewController id="e1v-2u-b3f" customClass="MapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wlU-p9-Kze"/>
+                        <viewControllerLayoutGuide type="bottom" id="mhq-o7-903"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xvd-7I-oyK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Cp8-Hi-nR9">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <connections>
+                                    <outlet property="delegate" destination="e1v-2u-b3f" id="vdZ-8J-otb"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Cp8-Hi-nR9" firstAttribute="top" secondItem="xvd-7I-oyK" secondAttribute="topMargin" id="DCH-4R-hhC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Cp8-Hi-nR9" secondAttribute="trailing" constant="-16" id="Kk7-r4-8Y2"/>
+                            <constraint firstItem="Cp8-Hi-nR9" firstAttribute="leading" secondItem="xvd-7I-oyK" secondAttribute="leadingMargin" constant="-16" id="Q58-Np-77I"/>
+                            <constraint firstItem="Cp8-Hi-nR9" firstAttribute="bottom" secondItem="xvd-7I-oyK" secondAttribute="bottomMargin" id="puK-gI-aRU"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="tVf-oT-6ZY"/>
+                    <connections>
+                        <outlet property="mapView" destination="Cp8-Hi-nR9" id="1EF-He-3q5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kY9-XQ-Hrj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="609" y="456"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -218,11 +254,12 @@
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="e1v-2u-b3f" kind="relationship" relationship="viewControllers" id="6j7-jg-Mmd"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="0.0"/>
+            <point key="canvasLocation" x="240" y="-286"/>
         </scene>
     </scenes>
     <resources>

@@ -10,11 +10,12 @@
 #import "PhotosViewController.h"
 #import "FavoritesCollectionViewCell.h"
 #import "InstagramImage.h"
+#import "PhotosCollectionViewCell.h"
 
 @interface FavoritesViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
 @property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
-@property (strong, nonatomic) NSMutableArray *favoritesArray;
+
 
 @end
 
@@ -35,22 +36,32 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+    self.isDeleted = NO;
 }
 
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Alert!" message:@"Would you like to delete this photo?" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Alert!" message:@"Would you like to delete this photo?" preferredStyle:UIAlertControllerStyleActionSheet];
     UIAlertAction *deleteButton = [UIAlertAction actionWithTitle:@"DELETE" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
+
+        // Below code removes data from first VC's array
 
         PhotosViewController *photoVC = self.tabBarController.viewControllers[0];
         [photoVC.favoritesArray removeObjectAtIndex:indexPath.item];
 
         [self.favoritesArray removeObjectAtIndex:indexPath.item];
         [self.collectionView reloadData];
+
+        // BOOL to check is photo is deleted
+        self.isDeleted = YES;
+
     }];
+    UIAlertAction *keepButton = [UIAlertAction actionWithTitle:@"KEEP" style:UIAlertActionStyleCancel handler:nil];
 
     [self presentViewController:alert animated:YES completion:nil];
     [alert addAction:deleteButton];
+    [alert addAction:keepButton];
 }
 
 

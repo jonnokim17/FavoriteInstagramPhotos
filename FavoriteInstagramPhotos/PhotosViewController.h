@@ -13,5 +13,7 @@
 @property (strong, nonatomic) NSMutableArray *dataArray;
 @property (strong, nonatomic) NSMutableArray *favoritesArray;
 
+@property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
+
 @end
 

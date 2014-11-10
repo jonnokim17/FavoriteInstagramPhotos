@@ -17,6 +17,8 @@
 		900FD1E51A0ECCCE006FEBBF /* FavoriteInstagramPhotosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 900FD1E41A0ECCCE006FEBBF /* FavoriteInstagramPhotosTests.m */; };
 		900FD1F01A0ECDA8006FEBBF /* PhotosCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 900FD1EF1A0ECDA8006FEBBF /* PhotosCollectionViewCell.m */; };
 		900FD1F31A0ED177006FEBBF /* InstagramImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 900FD1F21A0ED177006FEBBF /* InstagramImage.m */; };
+		90235B6D1A107529004CB772 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90235B6C1A107529004CB772 /* MapViewController.m */; };
+		90235B6F1A1075FA004CB772 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90235B6E1A1075FA004CB772 /* MapKit.framework */; };
 		90BBF7D51A0EFBE700E94582 /* FavoritesCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 90BBF7D41A0EFBE700E94582 /* FavoritesCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +52,9 @@
 		900FD1EF1A0ECDA8006FEBBF /* PhotosCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotosCollectionViewCell.m; sourceTree = "<group>"; };
 		900FD1F11A0ED177006FEBBF /* InstagramImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstagramImage.h; sourceTree = "<group>"; };
 		900FD1F21A0ED177006FEBBF /* InstagramImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstagramImage.m; sourceTree = "<group>"; };
+		90235B6B1A107529004CB772 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		90235B6C1A107529004CB772 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		90235B6E1A1075FA004CB772 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		90BBF7D31A0EFBE700E94582 /* FavoritesCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesCollectionViewCell.h; sourceTree = "<group>"; };
 		90BBF7D41A0EFBE700E94582 /* FavoritesCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -59,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90235B6F1A1075FA004CB772 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +81,7 @@
 		900FD1B91A0ECCCE006FEBBF = {
 			isa = PBXGroup;
 			children = (
+				90235B6E1A1075FA004CB772 /* MapKit.framework */,
 				900FD1C41A0ECCCE006FEBBF /* FavoriteInstagramPhotos */,
 				900FD1E11A0ECCCE006FEBBF /* FavoriteInstagramPhotosTests */,
 				900FD1C31A0ECCCE006FEBBF /* Products */,
@@ -148,6 +155,8 @@
 				900FD1CD1A0ECCCE006FEBBF /* PhotosViewController.m */,
 				900FD1CF1A0ECCCE006FEBBF /* FavoritesViewController.h */,
 				900FD1D01A0ECCCE006FEBBF /* FavoritesViewController.m */,
+				90235B6B1A107529004CB772 /* MapViewController.h */,
+				90235B6C1A107529004CB772 /* MapViewController.m */,
 			);
 			name = VCS;
 			sourceTree = "<group>";
@@ -266,6 +275,7 @@
 				900FD1F31A0ED177006FEBBF /* InstagramImage.m in Sources */,
 				900FD1D11A0ECCCE006FEBBF /* FavoritesViewController.m in Sources */,
 				900FD1F01A0ECDA8006FEBBF /* PhotosCollectionViewCell.m in Sources */,
+				90235B6D1A107529004CB772 /* MapViewController.m in Sources */,
 				900FD1CB1A0ECCCE006FEBBF /* AppDelegate.m in Sources */,
 				900FD1CE1A0ECCCE006FEBBF /* PhotosViewController.m in Sources */,
 				90BBF7D51A0EFBE700E94582 /* FavoritesCollectionViewCell.m in Sources */,

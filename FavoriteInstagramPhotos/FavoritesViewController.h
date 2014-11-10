@@ -10,6 +10,8 @@
 
 @interface FavoritesViewController : UIViewController
 
+@property BOOL isDeleted;
+@property (strong, nonatomic) NSMutableArray *favoritesArray;
 
 @end
 
