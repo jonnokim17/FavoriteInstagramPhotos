@@ -40,13 +40,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
     self.isDeleted = NO;
 }
 
+#pragma mark - Alert functionality in didSelectItemAtIndexPath Method
+
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Alert!" message:@"Would you like to delete this photo?" preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Menu" message:@"" preferredStyle:UIAlertControllerStyleActionSheet];
     UIAlertAction *deleteButton = [UIAlertAction actionWithTitle:@"DELETE" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
 
         // Below code removes data from first VC's array
@@ -61,7 +62,7 @@
         self.isDeleted = YES;
 
     }];
-    UIAlertAction *keepButton = [UIAlertAction actionWithTitle:@"KEEP" style:UIAlertActionStyleCancel handler:nil];
+    UIAlertAction *keepButton = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil];
 
     //Add Twitter use
 
