@@ -15,8 +15,6 @@
 
 @interface PhotosViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UISearchBarDelegate>
 
-
-
 @end
 
 @implementation PhotosViewController
@@ -70,15 +68,7 @@
     }];
 }
 
--(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
-{
-
-    InstagramImage *instaImage = self.dataArray[indexPath.item];
-
-    instaImage.isSelected = !instaImage.isSelected;
-
-    [self checkForFavoritedPhoto:instaImage];
-}
+#pragma mark - Helper Method
 
 - (void)checkForFavoritedPhoto:(InstagramImage *)photo
 {
@@ -102,10 +92,6 @@
     {
         [self.favoritesArray removeObject:photo];
     }
-
-//    if (favoritedPhoto == YES && instaImage.isSelected) {
-//        [self.favoritesArray removeObject:photo];
-//    }
 
     [self.collectionView reloadData];
     [self save];
@@ -135,6 +121,8 @@
 }
 
 
+#pragma mark - CollectionView Delegate Methods
+
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
@@ -160,7 +148,19 @@
     return cell;
 }
 
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+
+    InstagramImage *instaImage = self.dataArray[indexPath.item];
+
+    instaImage.isSelected = !instaImage.isSelected;
+
+    [self checkForFavoritedPhoto:instaImage];
+}
+
 #pragma mark SAVE/LOAD METHODS
+
+// Not working...
 
 - (void)save
 {

@@ -23,28 +23,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-//    self.mapArray = [@[] mutableCopy];
-//
-//    FavoritesViewController *favoritesVC = self.tabBarController.viewControllers[1];
-//    [self.mapArray addObjectsFromArray:favoritesVC.favoritesArray];
-
     NSLog(@"%lu", (unsigned long)self.mapArray.count);
 
     MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
-
-//    if (instagramImage.coordinate.longitude != 0) {
-//        annotation.coordinate = instagramImage.coordinate;
-//    }
-//    else
-//    {
-//        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"SORRY" message:@"no location found!" preferredStyle:UIAlertControllerStyleAlert];
-//        UIAlertAction *okButton = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil];
-//
-//        [alert addAction:okButton];
-//
-//        [self presentViewController:alert animated:YES completion:nil];
-//    }
-
     annotation.coordinate = self.coordinate;
     annotation.title = self.user;
     annotation.subtitle = self.username;
@@ -75,8 +56,6 @@
 
     return pin;
 }
-
-
 
 
 @end

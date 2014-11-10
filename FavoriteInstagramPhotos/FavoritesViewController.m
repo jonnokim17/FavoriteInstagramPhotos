@@ -30,12 +30,11 @@
 {
     self.favoritesArray = [@[] mutableCopy];
 
-    [self.collectionView reloadData];
-
     PhotosViewController *photoVC = self.tabBarController.viewControllers[0];
 
     [self.favoritesArray addObjectsFromArray:photoVC.favoritesArray];
 
+    [self.collectionView reloadData];
 }
 
 - (void)viewDidLoad
@@ -62,7 +61,7 @@
         [self.favoritesArray removeObjectAtIndex:indexPath.item];
         [self.collectionView reloadData];
 
-        // BOOL to check is photo is deleted
+        // set BOOL isDeleted to YES when Delete button is pressed.
         self.isDeleted = YES;
 
     }];
@@ -109,11 +108,12 @@
 
     }];
 
-    [self presentViewController:alert animated:YES completion:nil];
     [alert addAction:deleteButton];
     [alert addAction:keepButton];
     [alert addAction:tweetButton];
     [alert addAction:emailButton];
+
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 #pragma mark - MFMessageComposeViewControllerDelegate
@@ -123,6 +123,7 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+#pragma mark - CollectionView Delegate Methods
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
@@ -147,6 +148,8 @@
 {
     return CGSizeMake(self.view.frame.size.width, self.view.frame.size.width);
 }
+
+#pragma mark - Prep for segue to MapVC
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
