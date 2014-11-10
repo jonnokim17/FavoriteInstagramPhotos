@@ -55,6 +55,9 @@
         PhotosViewController *photoVC = self.tabBarController.viewControllers[0];
         [photoVC.favoritesArray removeObjectAtIndex:indexPath.item];
 
+        InstagramImage *InstaPhoto = self.favoritesArray[indexPath.item];
+        InstaPhoto.isSelected = NO;
+
         [self.favoritesArray removeObjectAtIndex:indexPath.item];
         [self.collectionView reloadData];
 

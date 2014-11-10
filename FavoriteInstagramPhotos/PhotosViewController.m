@@ -75,7 +75,7 @@
 
     InstagramImage *instaImage = self.dataArray[indexPath.item];
 
-    instaImage.isSelected = YES;
+    instaImage.isSelected = !instaImage.isSelected;
 
     [self checkForFavoritedPhoto:instaImage];
 }
@@ -84,7 +84,9 @@
 {
     BOOL favoritedPhoto = NO;
 
-    for (InstagramImage *instaImage in self.favoritesArray)
+    InstagramImage *instaImage;
+
+    for (instaImage in self.favoritesArray)
     {
         if (photo.photoID == instaImage.photoID)
         {
@@ -92,10 +94,19 @@
         }
     }
 
-    if (favoritedPhoto == NO)
+    if (favoritedPhoto == NO && !instaImage.isSelected)
     {
         [self.favoritesArray addObject:photo];
     }
+    else
+    {
+        [self.favoritesArray removeObject:photo];
+    }
+
+//    if (favoritedPhoto == YES && instaImage.isSelected) {
+//        [self.favoritesArray removeObject:photo];
+//    }
+
     [self.collectionView reloadData];
     [self save];
 }
